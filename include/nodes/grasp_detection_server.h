@@ -33,7 +33,6 @@
 #ifndef GRASP_DETECTION_SERVER_H_
 #define GRASP_DETECTION_SERVER_H_
 
-
 // ROS
 #include <eigen_conversions/eigen_msg.h>
 #include <pcl_conversions/pcl_conversions.h>
@@ -48,9 +47,8 @@
 #include <gpd/detect_grasps.h>
 
 // this project (headers)
-#include "../gpd/grasp_detector.h"
-#include "../gpd/grasp_plotter.h"
-
+#include "gpd/grasp_detector.h"
+#include "gpd/grasp_plotter.h"
 
 class GraspDetectionServer
 {
