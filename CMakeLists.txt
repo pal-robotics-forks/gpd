@@ -94,6 +94,12 @@ generate_messages(DEPENDENCIES geometry_msgs sensor_msgs std_msgs)
 #   cfg/DynReconf2.cfg
 # )
 
+SET(GPD_LIB_FILES clustering grasp_detector grasp_plotter learning sequential_importance_sampling
+    grasp_image grasp_image_15_channels dense_layer conv_layer lenet)
+foreach(gpd_lib_files ${GPD_LIB_FILES})
+    LIST(APPEND GPB_LIB ${PROJECT_NAME}_${gpd_lib_files})
+endforeach()
+
 ###################################
 ## catkin specific configuration ##
 ###################################
@@ -105,7 +111,7 @@ generate_messages(DEPENDENCIES geometry_msgs sensor_msgs std_msgs)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 INCLUDE_DIRS include
-LIBRARIES gpd
+LIBRARIES ${GPB_LIB}
 CATKIN_DEPENDS cmake_modules eigen_conversions geometry_msgs message_runtime roscpp sensor_msgs std_msgs
 DEPENDS Eigen OpenCV PCL
 )
@@ -129,6 +135,10 @@ add_library(${PROJECT_NAME}_grasp_image_15_channels src/${PROJECT_NAME}/grasp_im
 add_library(${PROJECT_NAME}_dense_layer src/${PROJECT_NAME}/dense_layer.cpp)
 add_library(${PROJECT_NAME}_conv_layer src/${PROJECT_NAME}/conv_layer.cpp)
 add_library(${PROJECT_NAME}_lenet src/${PROJECT_NAME}/lenet.cpp)
+
+foreach(gpd_lib ${GPB_LIB})
+    add_dependencies(${gpd_lib} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+endforeach()
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
