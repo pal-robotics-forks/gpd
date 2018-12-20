@@ -5,7 +5,7 @@ project(gpd)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS cmake_modules eigen_conversions geometry_msgs message_generation roscpp
-  sensor_msgs std_msgs)
+  sensor_msgs std_msgs visualization_msgs pcl_conversions)
 
 # PCL
 find_package(PCL REQUIRED)
@@ -112,7 +112,7 @@ endforeach()
 catkin_package(
 INCLUDE_DIRS include
 LIBRARIES ${GPB_LIB}
-CATKIN_DEPENDS cmake_modules eigen_conversions geometry_msgs message_runtime roscpp sensor_msgs std_msgs
+CATKIN_DEPENDS cmake_modules eigen_conversions geometry_msgs message_runtime roscpp sensor_msgs std_msgs visualization_msgs pcl_conversions
 DEPENDS Eigen OpenCV PCL
 )
 
