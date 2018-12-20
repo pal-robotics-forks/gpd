@@ -95,6 +95,14 @@ GraspDetector::GraspDetector(ros::NodeHandle& node)
   node.param("num_selected", num_selected_, 100);
 }
 
+void GraspDetector::setTableHeight(const double table_height)
+{
+  if (table_height > 0.0)
+  {
+    table_height_ = table_height;
+    ROS_INFO_STREAM("Table height in the grasp detector is set to " << table_height_ << " m");
+  }
+}
 
 std::vector<Grasp> GraspDetector::detectGrasps(const CloudCamera& cloud_cam)
 {

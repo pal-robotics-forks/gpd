@@ -90,6 +90,12 @@ public:
   }
   
   /**
+   * @brief setTableHeight - A method to set table height
+   * @param table_height
+   */
+  void setTableHeight(const double table_height);
+
+  /**
    * \brief Preprocess the point cloud.
    * \param cloud_cam the point cloud
    */
