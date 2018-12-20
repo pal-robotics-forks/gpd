@@ -2,8 +2,8 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.1 (2018-12-20)
+------------------
 * fixing some missing dependencies
 * added gpg dependency
 * exporting gpd libraries
