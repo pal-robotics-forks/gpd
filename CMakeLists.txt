@@ -289,3 +289,29 @@ set_target_properties(${PROJECT_NAME}_test_lenet
 set_target_properties(${PROJECT_NAME}_test_service
                       PROPERTIES OUTPUT_NAME test_service
                       PREFIX "")
+
+SET(TARGET_FILES detect_grasps detect_grasps_server classify_candidates create_grasp_images
+    test_occlusion test_grasp_image test_conv_layer test_lenet test_service)
+foreach(target_file ${TARGET_FILES})
+    install(TARGETS ${PROJECT_NAME}_${target_file}
+    ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+    LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+    )
+endforeach()
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY include/nodes/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE
+)
+
+install(DIRECTORY launch lenet rviz tutorials
+DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+PATTERN ".svn" EXCLUDE)
