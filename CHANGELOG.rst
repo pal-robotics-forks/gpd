@@ -2,6 +2,11 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added missing install rules
+* Contributors: Sai Kishor Kothakota
+
 1.0.1 (2018-12-20)
 ------------------
 * fixing some missing dependencies
