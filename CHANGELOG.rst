@@ -2,6 +2,11 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix missing dependency
+* Contributors: Victor Lopez
+
 1.0.3 (2018-12-21)
 ------------------
 * added missing library install rule
