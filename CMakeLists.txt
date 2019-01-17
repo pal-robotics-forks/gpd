@@ -157,6 +157,7 @@ add_executable(${PROJECT_NAME}_test_conv_layer src/tests/test_conv_layer.cpp)
 add_executable(${PROJECT_NAME}_test_lenet src/tests/test_lenet.cpp)
 add_executable(${PROJECT_NAME}_test_service src/tests/test_service.cpp)
 
+add_dependencies(${PROJECT_NAME}_test_service src/tests/test_service.cpp ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
