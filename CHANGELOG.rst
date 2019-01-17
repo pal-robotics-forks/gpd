@@ -2,8 +2,8 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.4 (2019-01-17)
+------------------
 * Fix missing dependency
 * Contributors: Victor Lopez
 
