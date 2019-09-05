@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>gpd</name>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <description>This package detects 6-DOF grasp poses for a parallel jaw gripper in 3D point clouds.</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 

@@ -2,8 +2,8 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.5 (2019-09-05)
+------------------
 * Merge branch 'fix-dep-name' into 'pal_version'
   Fix dependency name
   See merge request ros-overlays/gpd!1
