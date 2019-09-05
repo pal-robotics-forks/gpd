@@ -2,6 +2,15 @@
 Changelog for package gpd
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-dep-name' into 'pal_version'
+  Fix dependency name
+  See merge request ros-overlays/gpd!1
+* Fix dependency name
+* Fix opencv dependency usage
+* Contributors: Victor Lopez
+
 1.0.4 (2019-01-17)
 ------------------
 * Fix missing dependency
